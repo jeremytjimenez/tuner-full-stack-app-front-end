@@ -1,5 +1,15 @@
+html {
+  min-height: 100%;
+}
+
 .App {
   text-align: center;
+}
+
+body {
+  background: linear-gradient(rgb(88, 88, 231), rgb(202, 167, 202));
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .App-logo {
