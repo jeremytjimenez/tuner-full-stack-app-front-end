@@ -10,7 +10,7 @@ function Songs() {
     
     const navigate = useNavigate()
 
-    let url = process.env.REACT_APP_API_URL
+    let url = process.env.NODE_ENV === "production" ? "https://tuner-full-stack-back-end.onrender.com" : process.env.REACT_APP_API_URL;
 
     useEffect(() => {
         fetchData()
