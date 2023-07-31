@@ -1,0 +1,52 @@
+.song {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: 9fr, 1fr;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.song section {
+    grid-column: 5 / span 3;
+    grid-row: 1;
+    padding: 1em;
+    color: blue;
+    font-size: 30px;
+}
+
+.songName {
+    text-shadow: 0px 0px 10px white;
+    font-family: monospace;
+    color: rgb(172, 207, 238);
+    border-radius: 50px;
+}
+
+.song button {
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(blue, aliceblue);
+    font-size: 18px;
+    margin-left: 45px;
+}
+
+.song button:hover {
+    color: blue;
+}
+
+.back {
+    max-width: fit-content;
+    justify-content: center;
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.edit {
+    max-width: fit-content;
+    grid-row: 2;
+    grid-column: 6;
+}
+
+.delete {
+    max-width: fit-content;
+    grid-row: 2;
+    grid-column: 8;
+}

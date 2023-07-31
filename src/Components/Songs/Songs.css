@@ -1,0 +1,29 @@
+.songs {
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    padding: 1em;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    align-items: center;
+}
+
+.songs ul {
+    list-style: none;
+    grid-column: 2;
+}
+
+.songs ul li {
+    color: blue;
+    padding: 1em;
+    border: 1px solid rgb(34, 82, 187);
+    border-radius: 50px;
+    margin: 1em;
+    background: rgba(97, 99, 208, 0.3);
+    width: 15em;
+}
+
+.songs ul li:hover {
+    background: rgba(135, 136, 206, 0.3);
+}

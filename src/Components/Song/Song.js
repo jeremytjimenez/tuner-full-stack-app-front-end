@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import "./Song.css"
 
 function Song() {
   const [song, setSong] = useState(null);
@@ -50,31 +51,35 @@ function Song() {
   }
 
   return (
-    <div>
-      <div>
-        <p>
-          <strong>{song?.name}</strong>
-        </p>
-        <p>artist: {song?.artist}</p>
-        <p>album: {song?.album}</p>
-        <p>time: {song?.time}</p>
-        <p>Is favorite? {String(song?.is_favorite)}</p>
-        <button
-          onClick={() => {
-            navigate("/songs");
-          }}
-        >
-          Go back
-        </button>
-        <button
-          onClick={() => {
-            navigate(`/songs/${id}/edit`);
-          }}
-        >
-          Edit
-        </button>
-        <button onClick={() => handleDeleteById(id)}>Delete</button>
-      </div>
+    <div className="song">
+      <section className="songDetails">
+      <p className="songName">
+        <strong>{song?.name}</strong>
+      </p>
+      <p>artist: {song?.artist}</p>
+      <p>album: {song?.album}</p>
+      <p>time: {song?.time}</p>
+      <p>Is favorite? {String(song?.is_favorite)}</p>
+
+      </section>
+
+      <button
+        className="back"
+        onClick={() => {
+          navigate("/songs");
+        }}
+      >
+        Go back
+      </button>
+      <button
+      className="edit"
+        onClick={() => {
+          navigate(`/songs/${id}/edit`);
+        }}
+      >
+        Edit
+      </button>
+      <button className="delete" onClick={() => handleDeleteById(id)}>Delete</button>
     </div>
   );
 }

@@ -18,31 +18,30 @@ function NewSong() {
   async function handleOnSubmit(e) {
     e.preventDefault();
 
-      try {
-        let result = await axios.post(`${url}/songs`, song);
+    try {
+      let result = await axios.post(`${url}/songs`, song);
 
-        setSong({
-            name: "",
-            artist: "",
-            album: "",
-            time: "",
-            is_favorite: false,
-          });
+      setSong({
+        name: "",
+        artist: "",
+        album: "",
+        time: "",
+        is_favorite: false,
+      });
 
-        alert("Successful!");
+      alert("Successful!");
 
-        navigate(`/songs`);
-      } catch (e) {
-        console.log(e);
-      }
-
+      navigate(`/songs`);
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   return (
-    <div>
+    <div className="newSongForm">
       <form onSubmit={(e) => handleOnSubmit(e)}>
         <h2>Add song</h2>
-        <div>
+        <div className="songName">
           <label>Name</label>
           <input
             type="text"
@@ -57,7 +56,7 @@ function NewSong() {
           />
         </div>
 
-        <div>
+        <div className="songArtist">
           <label>Artist</label>
           <input
             type="text"
@@ -72,7 +71,7 @@ function NewSong() {
           />
         </div>
 
-        <div>
+        <div className="songAlbum">
           <label>Album</label>
           <input
             type="text"
@@ -87,7 +86,7 @@ function NewSong() {
           />
         </div>
 
-        <div>
+        <div className="songTime">
           <label>Time</label>
           <input
             type="text"
@@ -103,7 +102,7 @@ function NewSong() {
         </div>
 
         <div>
-          <label>is favorite?</label>
+          <label>favorite?</label>
           <input
             type="checkbox"
             checked={song?.is_favorite}

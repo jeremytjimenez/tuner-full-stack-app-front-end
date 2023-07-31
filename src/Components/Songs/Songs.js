@@ -2,7 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-// require("dotenv").config()
+
+import "./Songs.css"
 
 function Songs() {
     const [songs, setSongs] = useState([])
@@ -27,11 +28,11 @@ function Songs() {
     }
 
     return (
-        <div>
+        <div className="songs">
             <ul>
                 {songs.map((song) => {
                     return (
-                        <li key={song.id}>{song.name} - <span onClick={() => {navigate(`/songs/${song.id}`)}}>see details</span></li>
+                        <li key={song.id} onClick={() => {navigate(`/songs/${song.id}`)}}>{song.name}</li>
                     )
                 })}
             </ul>
