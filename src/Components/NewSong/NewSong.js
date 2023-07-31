@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import "./NewSong.css"
+
 function NewSong() {
   const [song, setSong] = useState({
     name: "",
@@ -43,6 +45,7 @@ function NewSong() {
         <h2>Add song</h2>
         <div className="songName">
           <label>Name</label>
+          <br />
           <input
             type="text"
             value={song?.name}
@@ -58,6 +61,7 @@ function NewSong() {
 
         <div className="songArtist">
           <label>Artist</label>
+          <br />
           <input
             type="text"
             value={song?.artist}
@@ -73,6 +77,7 @@ function NewSong() {
 
         <div className="songAlbum">
           <label>Album</label>
+          <br />
           <input
             type="text"
             value={song?.album}
@@ -88,6 +93,7 @@ function NewSong() {
 
         <div className="songTime">
           <label>Time</label>
+          <br />
           <input
             type="text"
             value={song?.time}
@@ -103,6 +109,7 @@ function NewSong() {
 
         <div>
           <label>favorite?</label>
+          <br />
           <input
             type="checkbox"
             checked={song?.is_favorite}

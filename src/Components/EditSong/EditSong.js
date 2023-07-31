@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import "./EditSong.css";
+
 function EditBookmark() {
   const { id } = useParams();
 
@@ -53,11 +55,12 @@ function EditBookmark() {
   }
 
   return (
-    <div>
+    <div className="editSongForm">
       <form onSubmit={(e) => handleOnSubmit(e)}>
         <h2>Edit song</h2>
         <div>
           <label>Name</label>
+          <br />
           <input
             type="text"
             value={song?.name}
@@ -73,6 +76,7 @@ function EditBookmark() {
 
         <div>
           <label>Artist</label>
+          <br />
           <input
             type="text"
             value={song?.artist}
@@ -88,6 +92,7 @@ function EditBookmark() {
 
         <div>
           <label>Album</label>
+          <br />
           <input
             type="text"
             value={song?.album}
@@ -103,6 +108,7 @@ function EditBookmark() {
 
         <div>
           <label>Time</label>
+          <br />
           <input
             type="text"
             value={song?.time}
@@ -117,7 +123,8 @@ function EditBookmark() {
         </div>
 
         <div>
-          <label>is favorite?</label>
+          <label>favorite?</label>
+          <br />
           <input
             type="checkbox"
             checked={song?.is_favorite}

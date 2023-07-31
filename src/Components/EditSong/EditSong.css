@@ -1,0 +1,41 @@
+.editSongForm form h2 {
+    padding: 20px 20px;
+    font-size: 32px;
+    font-weight: 800;
+    color: aliceblue;
+    text-shadow: 1px 1px 10px rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+}
+
+.editSongForm form {
+    border-radius: 100px;
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 10px;
+}
+
+.editSongForm form label {
+    font-family: monospace, sans-serif;
+    color: antiquewhite;
+    padding-right: 1em;
+}
+
+.editSongForm form label {
+    margin: 5px 0;
+}
+
+.editSongForm form input {
+    width: 70%;
+}
+
+.editSongForm form input {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.editSongForm form button {
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(blue, aliceblue);
+    font-size: 18px;
+}

@@ -53,13 +53,13 @@ function Song() {
   return (
     <div className="song">
       <section className="songDetails">
-      <p className="songName">
+      <p className="songDetailsName">
         <strong>{song?.name}</strong>
       </p>
       <p>artist: {song?.artist}</p>
       <p>album: {song?.album}</p>
       <p>time: {song?.time}</p>
-      <p>Is favorite? {String(song?.is_favorite)}</p>
+      <p>favorite? {song?.is_favorite ? "yes" : "no"}</p>
 
       </section>
 
