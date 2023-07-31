@@ -13,7 +13,8 @@ function Songs() {
     let url = process.env.NODE_ENV === "production" ? "https://tuner-full-stack-back-end.onrender.com" : process.env.REACT_APP_API_URL;
 
     useEffect(() => {
-        fetchData()
+        fetchData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
 

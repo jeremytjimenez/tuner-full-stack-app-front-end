@@ -23,6 +23,8 @@ function NewSong() {
     try {
       let result = await axios.post(`${url}/songs`, song);
 
+      console.log(result.data)
+
       setSong({
         name: "",
         artist: "",
@@ -31,7 +33,7 @@ function NewSong() {
         is_favorite: false,
       });
 
-      alert("Successful!");
+      alert(`Successful!`);
 
       navigate(`/songs`);
     } catch (e) {
